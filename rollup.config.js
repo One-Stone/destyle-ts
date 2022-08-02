@@ -2,8 +2,6 @@ import typescript from '@rollup/plugin-typescript'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
-import external from 'rollup-plugin-peer-deps-external'
-import dts from 'rollup-plugin-dts'
 const packageJson = require('./package.json')
 
 export default [
@@ -14,7 +12,7 @@ export default [
 				file: packageJson.main,
 				format: 'cjs',
 				sourcemap: true,
-				name: 'react-design-tokens-table',
+				name: packageJson.name,
 			},
 			{
 				file: packageJson.module,
@@ -22,9 +20,7 @@ export default [
 				sourcemap: true,
 			},
 		],
-		external: ['react'],
 		plugins: [
-			external(),
 			resolve(),
 			commonjs(),
 			typescript({ tsconfig: './tsconfig.json' }),
