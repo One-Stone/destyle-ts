@@ -29,6 +29,6 @@ const App = () => {
 }
 ```
 
-### 💡 Inspired by
+## 💡 Inspired by
 
 [destyle.css](https://github.com/nicolas-cusan/destyle.css)
