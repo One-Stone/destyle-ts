@@ -1,6 +1,6 @@
 {
 	"name": "destyle-ts",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Style reset for typescript. Converted desyle.css to style object.",
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.js",
