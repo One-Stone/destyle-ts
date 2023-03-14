@@ -16,7 +16,10 @@ import { destyle } from 'destyle-ts'
 
 // Stitches
 import { globalCss } from '@stitches/react'
-const Destyle = globalCss(destyle)
+const Destyle = () => {
+	globalCss(destyle)
+	return <></>
+}
 
 // Root Component
 const App = () => {
